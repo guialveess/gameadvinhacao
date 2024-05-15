@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/script.js"></script>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Zen+Dots&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+  <title>Jogo da Advinhação</title>
+</head>
+
+<body>
+    <div class="top-bar">Jogo da Adivinhação</div>
+    <div id="interrogation">
+        <svg width="28" height="46" viewBox="0 0 28 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.4332 45.4596C11.0951 45.4596 8.9006 44.5444 7.24683 42.8889C5.59306 40.9551 4.68305 38.7606 4.68305 36.4225C4.68305 34.0845 5.59306 31.89 7.24683 30.5232L18.951 18.8191C20.2722 17.4926 21.0002 15.7355 21.0002 13.87C21.0002 11.9975 20.2722 10.2405 18.9492 8.92095C16.2209 6.19267 11.7811 6.18742 9.05461 8.92095C7.72809 10.2405 7.00008 11.9957 7.00008 13.87H0C0 10.1302 1.45952 6.61092 4.10905 3.96489C9.39411 -1.32542 18.608 -1.32017 23.9 3.97189C26.5443 6.60917 28.0003 10.1232 28.0003 13.87C28.0003 17.6098 26.5443 21.1238 23.8983 23.7681L12.1941 35.1835C11.5134 35.8678 11.5134 36.9738 12.1941 37.658C12.8784 38.3423 13.9844 38.3423 14.6687 37.658C15.1132 37.2065 15.1814 36.6868 15.1814 36.4138H22.1815C22.1815 38.7518 21.2715 40.9533 19.6177 42.8871C17.9657 44.5426 15.7712 45.4596 13.4332 45.4596Z" fill="white"/>
+        </svg>
+      </div>
+    <h1>Jogo da Adivinhação</h1>
+    <p>Estou pensando em um número entre 1 e 100. <br> Você consegue adivinhar qual é?</p>
+    <div class="input-wrapper">
+       <input type="text" name="number" id="guessField" placeholder="Digite seu palpite">
+    </div>
+    <p id="hint"></p>
+    <p id="guessMessage"></p>
+    <p id="attempts"></p>
+
+    <div class="button-wrapper">
+        <button onclick="checkGuess()">Enviar Palpite</button>
+    </div>
+
+    <p>Está difícil? Aperte em Jogar Novamente !</p>
+
+    <div class="button-wrapper">
+        <button id="button-reset" onclick="resetGame()">Jogar Novamente</button>
+    </div>
+
+</form>
+</body>
+
+</html>
