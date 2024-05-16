@@ -8,12 +8,25 @@ function newGame() {
   isGameOver = false;
   updateAttempts();
   setMessage('Estou pensando em um número entre 1 e 100. Você consegue adivinhar qual é?');
-  updateHint(); 
+  updateHint(); // Adiciona a chamada para atualizar a dica
 }
 
 function updateHint() {
-  const midpoint = Math.floor((1 + 100) / 2);
-  const hint = secretNumber < midpoint ? 'O número é menor que ' + midpoint : 'O número é maior que ' + midpoint;
+  let hint = '';
+  // Dica de par ou ímpar
+  hint += secretNumber % 2 === 0 ? 'O número é par. ' : 'O número é ímpar. ';
+  
+  // Dica de intervalo
+  if (secretNumber <= 25) {
+    hint += 'O número está entre 1 e 25.';
+  } else if (secretNumber <= 50) {
+    hint += 'O número está entre 26 e 50.';
+  } else if (secretNumber <= 75) {
+    hint += 'O número está entre 51 e 75.';
+  } else {
+    hint += 'O número está entre 76 e 100.';
+  }
+
   document.getElementById('hint').innerText = hint;
 }
 

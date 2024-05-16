@@ -29,7 +29,7 @@
       color: #ffffff;
       transition: all 0.3s ease-out;
       text-align: center;
-      margin-top: 9rem;
+      margin-top: 13rem;
       margin-bottom: 40px;
     }
 
@@ -156,8 +156,14 @@
 
   #interrogation {
     position: absolute;
-    top: 13%;
+    top: 17%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: girar 5s linear infinite;
+    /* animation: girar 5s linear infinite; */
+  }
+
+  @media (min-width: 1024px) {
+    #interrogation {
+      top: 14%; /* Ajuste esse valor conforme necessário */
+    }
   }
